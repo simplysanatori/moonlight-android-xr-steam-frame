@@ -1,4 +1,4 @@
-> **Steam Frame:** this fork runs on Valve's Steam Frame through Lepton. Everything about it, from install to building, is in [STEAM_FRAME.md](STEAM_FRAME.md); prebuilt APKs are on the Releases page. The Frame changes were written by an AI (Anthropic's Claude) and tested by the repository owner on a Steam Frame; see the AI disclosure in that file.
+> **Steam Frame:** this fork runs on Valve's Steam Frame through Lepton. Install, controls, settings and building are in [STEAM_FRAME.md](STEAM_FRAME.md). Prebuilt APKs are on the [Releases page](https://github.com/simplysanatori/moonlight-android-xr-steam-frame/releases). The Frame changes were written with Anthropic's Claude and tested on a Steam Frame by the repository owner. A native Steam Frame client, Moonlight XR for Frame, is at [simplysanatori/moonlight-xr-native](https://github.com/simplysanatori/moonlight-xr-native).
 
 <p align="center">
   <img src="moonlight-xr-logo-transparent.png" height="200" alt="moonlight-xr-logo"><br>
