@@ -1,7 +1,7 @@
 #!/bin/bash
 # Builds this checkout of Moonlight XR with a self-contained toolchain (no root
 # needed). Works on an arm64 Linux machine such as the Steam Frame itself, or on
-# x86_64. Check out the branch you want first (steam-frame, or room-test).
+# x86_64. It builds the branch that is checked out (normally steam-frame).
 # Usage: steam-frame/build.sh      output: steam-frame/release/MoonlightXR-steam-frame-<branch>.apk
 set -euo pipefail
 HERE=$(cd "$(dirname "$0")" && pwd); SRC=$(cd "$HERE/.." && pwd)
