@@ -207,12 +207,11 @@ To repeat the check on a clone (each command should print 0):
 ```sh
 git remote add upstream https://github.com/Gilleece/moonlight-android-xr.git
 git fetch upstream master
-R=upstream/master..HEAD
-git log -p $R | grep '^+' | grep -v '127\.0\.0\.1' | grep -cE '\b([0-9]{1,3}\.){3}[0-9]{1,3}\b'
-git log -p $R | grep '^+' | grep -ciE '\b([0-9a-f]{2}:){5}[0-9a-f]{2}\b'
-git log -p $R | grep '^+' | grep -ciE '\b[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\b'
-git log -p $R | grep '^+' | grep -cE 'gh[pousr]_[A-Za-z0-9]{20}|github_pa[t]_|sk-[A-Za-z0-9]{20}|BEGIN [A-Z ]*PRIVATE KEY'
-git log -p $R | grep '^+' | grep -ciE 'store[P]assword=[^%$ ]|key[P]assword=[^%$ ]'
+git diff upstream/master HEAD | grep '^+' | grep -v '127\.0\.0\.1' | grep -cE '\b([0-9]{1,3}\.){3}[0-9]{1,3}\b'
+git diff upstream/master HEAD | grep '^+' | grep -ciE '\b([0-9a-f]{2}:){5}[0-9a-f]{2}\b'
+git diff upstream/master HEAD | grep '^+' | grep -ciE '\b[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\b'
+git diff upstream/master HEAD | grep '^+' | grep -cE 'gh[pousr]_[A-Za-z0-9]{20}|github_pa[t]_|sk-[A-Za-z0-9]{20}|BEGIN [A-Z ]*PRIVATE KEY'
+git diff upstream/master HEAD | grep '^+' | grep -ciE 'store[P]assword=[^%$ ]|key[P]assword=[^%$ ]'
 git ls-files | grep -ciE '(^|/)keystore\.properties$|\.jks$|\.keystore$|\.pem$|\.p12$'
 ```
 
