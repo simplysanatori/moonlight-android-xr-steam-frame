@@ -212,7 +212,7 @@ git log -p $R | grep '^+' | grep -v '127\.0\.0\.1' | grep -cE '\b([0-9]{1,3}\.){
 git log -p $R | grep '^+' | grep -ciE '\b([0-9a-f]{2}:){5}[0-9a-f]{2}\b'
 git log -p $R | grep '^+' | grep -ciE '\b[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\b'
 git log -p $R | grep '^+' | grep -cE 'gh[pousr]_[A-Za-z0-9]{20}|github_pa[t]_|sk-[A-Za-z0-9]{20}|BEGIN [A-Z ]*PRIVATE KEY'
-git log -p $R | grep '^+' | grep -ciE 'storePassword=[^%$ ]|keyPassword=[^%$ ]'
+git log -p $R | grep '^+' | grep -ciE 'store[P]assword=[^%$ ]|key[P]assword=[^%$ ]'
 git ls-files | grep -ciE '(^|/)keystore\.properties$|\.jks$|\.keystore$|\.pem$|\.p12$'
 ```
 
